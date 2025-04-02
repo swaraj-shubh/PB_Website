@@ -12,6 +12,7 @@ interface Achiever {
   achievements: string[];
 }
 
+const r=0;
 export default function AchievementCard({ achiever }: { achiever: Achiever }) {
   return (
     <div className="bg-[hsla(0,0%,100%,.079)] rounded-xl shadow-lg overflow-hidden w-[330px]">
@@ -21,21 +22,21 @@ export default function AchievementCard({ achiever }: { achiever: Achiever }) {
           height={500}
           src={achiever.imageUrl || ""}
           alt={`${achiever.name}'s profile`}
-          className="w-full h-[300px] object-cover object-center"
+          className="w-full h-[300px] object-cover object-center bg-green-400"
         />
       </div>
       <div className="p-4">
-        <h3 className="text-center text-2xl font-semibold mb-2 capitalize-first-letter">
+        <h3 className="mb-2 text-2xl font-semibold text-center capitalize-first-letter">
           {achiever.name}
         </h3>
-        <ul className="list-disc list-outside pl-5">
+        <ul className="pl-5 list-disc list-outside">
           {achiever?.companyPosition && (
-            <li className="text-gray-600 text-lg mb-2">
+            <li className="mb-2 text-lg text-gray-600">
               {achiever.companyPosition}
             </li>
           )}
           {achiever.achievements.map((achievement, index) => (
-            <li key={index} className="text-gray-600 text-lg mb-2">
+            <li key={index} className="mb-2 text-lg text-gray-600">
               {achievement}
             </li>
           ))}

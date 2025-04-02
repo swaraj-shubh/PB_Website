@@ -12,7 +12,6 @@ interface Achiever {
   achievements: string[];
 }
 
-const r=0;
 export default function AchievementCard({ achiever }: { achiever: Achiever }) {
   return (
     <div className="bg-[hsla(0,0%,100%,.079)] rounded-xl shadow-lg overflow-hidden w-[330px]">
@@ -22,7 +21,7 @@ export default function AchievementCard({ achiever }: { achiever: Achiever }) {
           height={500}
           src={achiever.imageUrl || ""}
           alt={`${achiever.name}'s profile`}
-          className="w-full h-[300px] object-cover object-center bg-green-400"
+          className="w-full h-[300px] object-cover object-center"
         />
       </div>
       <div className="p-4">
